@@ -1,53 +1,38 @@
 const axios = require('./axios')
 
-class Nhaccuatui {
-    getSong(key) {
-        return axios.post('/media/info', {
-            key,
-            type: 'song',
-        })
-    }
-
-    getPlaylist(key) {
-        return axios.post('/media/info', {
-            key,
-            type: 'playlist',
-        })
-    }
-
-    getLyric(key) {
-        return axios.post('/lyric', {
-            key,
-            type: 'song',
-        })
-    }
-
-    getTop20() {
-        return axios.post('/ranking/top20', {
-            category: 'nhac-viet',
-            type: 'song',
-            size: 20,
-        })
-    }
-
-    getTop100(key) {
-        return axios.post('/top100', {
-            key,
-        })
-    }
-
-    getHome() {
-        return axios.post('/home')
-    }
-
-    getTopic() {
-        return axios.post('/topic')
-    }
+export const getSong = key => {
+    return axios.post('/media/info', {
+        key,
+        type: 'song',
+    })
 }
 
-const nct = new Nhaccuatui()
-console.log(nct.getTopic().then((res) => {
-    // console.log(res)
-}))
+export const getPlaylist = key => {
+    return axios.post('/media/info', {
+        key,
+        type: 'playlist',
+    })
+}
 
-module.exports = new Nhaccuatui()
+export const getLyric = key => {
+    return axios.post('/lyric', {
+        key,
+        type: 'song',
+    })
+}
+
+export const getTop20 = () => {
+    return axios.post('/ranking/top20', {
+        category: 'nhac-viet',
+        type: 'song',
+        size: 20,
+    })
+}
+
+export const getTop100 = key => axios.post('/top100', {key})
+
+export const getHome = () => axios.post('/home')
+
+export const getTopic = () => axios.post('/topic')
+
+// Do more features, think about buildin server or package
