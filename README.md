@@ -33,6 +33,8 @@ This is a NodeJS library with Javascript support NodeJS Server
 ### Built With
 
 * [Javascript](https://www.javascript.com/)
+* [CryptoJs](https://www.npmjs.com/package/crypto-js)
+* [Axios](https://www.npmjs.com/package/axios)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
