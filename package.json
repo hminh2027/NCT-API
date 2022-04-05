@@ -1,7 +1,7 @@
 {
-  "name": "nct-api",
+  "name": "nctapi",
   "version": "1.0.0",
-  "description": "",
+  "description": "A music api built with JavaScript",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

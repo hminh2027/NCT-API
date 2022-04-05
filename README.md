@@ -32,7 +32,6 @@ This is a NodeJS library with Javascript support NodeJS Server
 <!-- ABOUT THE PROJECT -->
 ### Built With
 
-* [ExpressJs](https://expressjs.com/)
 * [Javascript](https://www.javascript.com/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -45,7 +44,7 @@ This is a NodeJS library with Javascript support NodeJS Server
 ### Installation
 
 ```sh
-npm install the-utc-api
+npm install nctapi
 ```
 
 </br>
@@ -53,13 +52,13 @@ npm install the-utc-api
 ### Prerequisites
 
 ```javascript
-const { getAllSchedule, getScheduleOfToday, getScheduleOfDay, getMarks, getGPA, getStudent, getTuition, getPaidTuition, getTuitionDebt } = require('utc-schedule-api')
+const {getTop100, getHome, getTop20, getTopic, getLyric, getPlaylist, getSong, searchSong} = require('nctapi')
 ```
 
 or
 
 ```javascript
-const api = require('the-utc-api')
+const api = require('nctapi')
 ```
 
 
@@ -70,91 +69,94 @@ const api = require('the-utc-api')
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-### 1. Schedule
+### 1. Search Song/Playlist
 </br>
 
-* Get all the subjects and time periods of student
+* Returns songs/playlists that closely match your search input
+* Especially you can use this function to get the key of any song/playlist
+
 
 ```javascript
-await getAllSchedule(username, password)
+searchSong(input)
 ```
 
 
-* Get the subjects and time periods of student today
-
-```javascript
-await getScheduleOfToday(username, password)
-```
-
-
-* Get the subjects and time periods of student on specific day
-
-```javascript
-await getScheduleOfDay(username, password, new Date(year, month, day))
-```
-
+### 2. Get Song
 </br>
 
-### 2. Mark
-</br>
-
-* Get all the marks of the student (can get at specific grade)
+* Returns song's detail
 
 ```javascript
-await getMarks(username, password, grade)
+getSong(key)
+```
+
+### 3. Get Lyric
+</br>
+
+* Returns song's lyric
+
+```javascript
+getLyric(key)
+```
+
+### 4. Get Playlist
+</br>
+
+* Returns playist's detail
+
+```javascript
+getPlaylist(key)
+```
+
+### 5. Get Home
+</br>
+
+* Returns homepage's information
+
+```javascript
+getHome()
+```
+
+### 6. Get Topic
+</br>
+
+* Returns all songs' topic
+
+```javascript
+getTopic()
 ```
 
 
-* Get the GPA of the student (can get in specific year)
-
-```javascript
-await getGPA(username, password, year)
-```
-
+### 7. Get Top 20
 </br>
 
-### 3. Student Profile
-</br>
-
-* Get all personal information of the student
+* Returns top 20 songs
 
 ```javascript
-await getStudent(username, password)
+getTop20()
 ```
 
+### 8. Get Top 100
 </br>
 
-### 4. Tuition
+* Returns top 20 songs
+
+```javascript
+getTop100(name)
+```
+There are 6 name type: 'nhactre', 'trutinh', 'nhactrinh', 'tienchien', 'rapviet', 'remixviet'
+
 </br>
-
-* Get all the tuition detail of the student
-
-```javascript
-await getTuition(username, password)
-```
-
-* Get all the paid tuition of the student
-
-```javascript
-await getPaidTuition(username, password)
-```
-* Get all the tuition debt of the student
-
-```javascript
-await getTuitionDebt(username, password)
-```
-</br>
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 <!-- CONTACT -->
 ## Contact
 
-Vu Hoang Minh - [Facebook](https://www.facebook.com/swag.lauch) - dackheros@gmail.com
+Vu Hoang Minh - [Facebook](https://www.facebook.com/swag.lauch) - vhminh2027@gmail.com
 
-Project Link: [UTC-API-Package](https://github.com/hminh2027/UTC-API-Package)
+Project Link: [NCT-API-Package](https://github.com/hminh2027/NCT-API)
 
-API Link: [The-UTC-API](http://theutcapi.herokuapp.com/)
+Base API Link: [Beta-NCT](https://beta.nhaccuatui.com)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
