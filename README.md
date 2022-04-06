@@ -6,6 +6,8 @@ A music api built base on `Nhaccuatui` api
 
 This is a NodeJS library with Javascript support NodeJS Server
 
+***To get the API key please feel free to dm me on Facebook***
+
 <br />
 
 <!-- TABLE OF CONTENTS -->
